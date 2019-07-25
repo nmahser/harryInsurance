@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Harry Prototype</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+  </head>
+
+  <body>
+    <div class="splitLeft">
+      <div class="Inputs">
+        <label for="ownerInput">Car's Owner: </label>
+        <input type="text" name="Owner" placeholder="Name" id="ownerInput" />
+        <label for="speedInput">Speed:</label>
+        <input type="text" name="speed" placeholder="Mph" id="speedInput" />
+
+        <label for="rightInput">Right:</label>
+        <input type="text" name="right" placeholder="Psi" id="rightInput" />
+        <label for="leftInput">Left:</label>
+        <input type="text" name="left" placeholder="Psi" id="leftInput" />
+        <label for="frontInput">Front:</label>
+        <input type="text" name="front" placeholder="Psi" id="frontInput" />
+        <label for="backInput">Back:</label>
+        <input id="backInput" name="back" placeholder="Psi" type="text" />
+        <label for="crashedInput">Crashed:</label>
+        <input
+          type="text"
+          name="crashed"
+          placeholder="Yes or No"
+          id="crashedInput"
+        />
+        <button id="inputSubmit" type="submit" value="Submit">Submit</button>
+      </div>
+    </div>
+
+    <div class="splitRight">
+      <select class="dropbtn" type="submit" value="Submit">
+        <div class="dropdown-content">
+          <option value="">Select a Car</option> <option value="1">1</option>
+          <option value="2">2</option> <option value="3">3</option>
+          <option value="4">4</option><option value="5">5</option>
+          <option value="6">6</option><option value="7">7</option>
+          <option value="8">8</option><option value="9">9</option>
+          <option value="10">10</option> <option value="11">11</option
+          ><option value="12">12</option><option value="13">13</option
+          ><option value="14">14</option><option value="15">15</option
+          ><option value="16">16</option><option value="17">17</option
+          ><option value="18">18</option><option value="19">19</option
+          ><option value="20">20</option><option value="21">21</option>
+        </div>
+      </select>
+      <div class="Outputs">
+        <h3>Car's Owner: <span id="ownerOutput"></span></h3>
+        <h3>Speed: <span id="speedOutput"></span></h3>
+        <h3>Right: <span id="rightOutput"></span></h3>
+        <h3>Left: <span id="leftOutput"></span></h3>
+        <h3>Front:<span id="frontOutput"></span></h3>
+        <h3>Back:<span id="backOutput"></span></h3>
+        <h3>Crashed: <span id="crashedOutput"></span></h3>
+      </div>
+    </div>
+  </body>
+</html>
