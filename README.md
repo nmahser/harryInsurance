@@ -7,5 +7,5 @@
 -> import account -> use the private key I sent it on Telegram
 - Open terminal type npm install 
 - Run npm run start:dev
-- Most likely you'll run into an error. Let me know how it goes
+- More likely you'll run into an error. Let me know how it goes
 
