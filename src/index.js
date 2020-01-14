@@ -34,97 +34,68 @@ const userPermission = async () => {
 // Copy paste the same abi
 const abi = [
   {
-    constant: true,
-    inputs: [
-      {
-        name: "_id",
-        type: "uint256"
-      }
-    ],
-    name: "getCarLeft",
-    outputs: [
-      {
-        name: "",
-        type: "uint256"
-      }
-    ],
-    payable: false,
-    stateMutability: "view",
-    type: "function"
-  },
-  {
-    constant: true,
-    inputs: [
-      {
-        name: "_id",
-        type: "uint256"
-      }
-    ],
-    name: "getCarFront",
-    outputs: [
-      {
-        name: "",
-        type: "uint256"
-      }
-    ],
-    payable: false,
-    stateMutability: "view",
-    type: "function"
-  },
-  {
-    constant: true,
-    inputs: [
-      {
-        name: "_id",
-        type: "uint256"
-      }
-    ],
-    name: "getCarBack",
-    outputs: [
-      {
-        name: "",
-        type: "uint256"
-      }
-    ],
-    payable: false,
-    stateMutability: "view",
-    type: "function"
-  },
-  {
     constant: false,
     inputs: [
       {
+        internalType: "string",
         name: "_name",
         type: "string"
       },
       {
+        internalType: "uint256",
         name: "_speed",
         type: "uint256"
       },
       {
-        name: "_crashed",
+        internalType: "uint256",
+        name: "_accelerometer",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "_gyroscope",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "_brakePressure",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "_distanceFromVehicle",
+        type: "uint256"
+      },
+      {
+        internalType: "string",
+        name: "_streetName",
         type: "string"
       },
       {
-        name: "_right",
+        internalType: "uint256",
+        name: "_areaCode",
         type: "uint256"
       },
       {
-        name: "_left",
-        type: "uint256"
+        internalType: "string",
+        name: "_timeOfDay",
+        type: "string"
       },
       {
-        name: "_front",
-        type: "uint256"
+        internalType: "string",
+        name: "_weather",
+        type: "string"
       },
       {
-        name: "_back",
+        internalType: "uint256",
+        name: "_crashed",
         type: "uint256"
       }
     ],
     name: "addCar",
     outputs: [
       {
+        internalType: "uint256",
         name: "",
         type: "uint256"
       }
@@ -137,13 +108,15 @@ const abi = [
     constant: true,
     inputs: [
       {
+        internalType: "uint256",
         name: "_id",
         type: "uint256"
       }
     ],
-    name: "getCarRight",
+    name: "getCarAccelerometer",
     outputs: [
       {
+        internalType: "uint256",
         name: "",
         type: "uint256"
       }
@@ -156,13 +129,15 @@ const abi = [
     constant: true,
     inputs: [
       {
+        internalType: "uint256",
         name: "_id",
         type: "uint256"
       }
     ],
-    name: "getCarSpeed",
+    name: "getCarAreaCode",
     outputs: [
       {
+        internalType: "uint256",
         name: "",
         type: "uint256"
       }
@@ -175,6 +150,91 @@ const abi = [
     constant: true,
     inputs: [
       {
+        internalType: "uint256",
+        name: "_id",
+        type: "uint256"
+      }
+    ],
+    name: "getCarBrakePressure",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    payable: false,
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    constant: true,
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_id",
+        type: "uint256"
+      }
+    ],
+    name: "getCarCrashed",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    payable: false,
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    constant: true,
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_id",
+        type: "uint256"
+      }
+    ],
+    name: "getCarDistanceFromVehicle",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    payable: false,
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    constant: true,
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_id",
+        type: "uint256"
+      }
+    ],
+    name: "getCarGyroscope",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    payable: false,
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    constant: true,
+    inputs: [
+      {
+        internalType: "uint256",
         name: "_id",
         type: "uint256"
       }
@@ -182,6 +242,7 @@ const abi = [
     name: "getCarName",
     outputs: [
       {
+        internalType: "string",
         name: "",
         type: "string"
       }
@@ -194,13 +255,78 @@ const abi = [
     constant: true,
     inputs: [
       {
+        internalType: "uint256",
         name: "_id",
         type: "uint256"
       }
     ],
-    name: "getCarCrashed",
+    name: "getCarSpeed",
     outputs: [
       {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    payable: false,
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    constant: true,
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_id",
+        type: "uint256"
+      }
+    ],
+    name: "getCarStreetName",
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string"
+      }
+    ],
+    payable: false,
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    constant: true,
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_id",
+        type: "uint256"
+      }
+    ],
+    name: "getCarTimeOfDay",
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string"
+      }
+    ],
+    payable: false,
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    constant: true,
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_id",
+        type: "uint256"
+      }
+    ],
+    name: "getCarWeather",
+    outputs: [
+      {
+        internalType: "string",
         name: "",
         type: "string"
       }
@@ -212,7 +338,7 @@ const abi = [
 ];
 
 //smart contract address
-const address = "0xeA919DE32A212fd511e0F18F2c05831e963594c1";
+const address = "0xe6A5A85D1D46368A52e10d6f774453f2321527dd";
 const contract = new web3.eth.Contract(abi, address);
 
 //Get the address of the connected metamask
@@ -238,12 +364,36 @@ web3.eth.getTransactionCount(address).then(res => console.log(res));
 userAccount = "0x1e1B5dE4961Cd3013412Bcb7aa684a52A2fd66a6";
 
 // Set function for the variables defined in the contract.
-async function setAttributes(name, speed, crashed, right, left, front, back) {
+async function setAttributes(
+  name,
+  speed,
+  accelerometer,
+  gyroscope,
+  brakePressure,
+  distanceFromVehicle,
+  streetName,
+  areaCode,
+  timeOfDay,
+  weather,
+  crashed
+) {
   //Gas price to send the transaction
   let gasPrice = new BN(5) * 10 ** 9; //5 Gwei
   let gas = new BN(500000);
   return await contract.methods
-    .addCar(name, speed, crashed, right, left, front, back)
+    .addCar(
+      name,
+      speed,
+      accelerometer,
+      gyroscope,
+      brakePressure,
+      distanceFromVehicle,
+      streetName,
+      areaCode,
+      timeOfDay,
+      weather,
+      crashed
+    )
     //Send the transaction
     .send({
       from: userAccount,
@@ -272,19 +422,36 @@ const getUserInputs = async number => {
   try {
     const carName = await contract.methods.getCarName(number).call();
     const carSpeed = await contract.methods.getCarSpeed(number).call();
+    const carAccelerometer = await contract.methods
+      .getCarAccelerometer(number)
+      .call();
+    const carGyroscope = await contract.methods.getCarGyroscope(number).call();
+    const carBrakePressure = await contract.methods
+      .getCarBrakePressure(number)
+      .call();
+    const carDistanceFromVehicle = await contract.methods
+      .getCarDistanceFromVehicle(number)
+      .call();
+    const carStreetName = await contract.methods
+      .getCarStreetName(number)
+      .call();
+    const carAreaCode = await contract.methods.getCarAreaCode(number).call();
+    const carTimeOfDay = await contract.methods.getCarTimeOfDay(number).call();
+    const carWeather = await contract.methods.getCarWeather(number).call();
     const carCrashed = await contract.methods.getCarCrashed(number).call();
-    const carRight = await contract.methods.getCarRight(number).call();
-    const carLeft = await contract.methods.getCarLeft(number).call();
-    const carFront = await contract.methods.getCarFront(number).call();
-    const carBack = await contract.methods.getCarBack(number).call();
+
     const array = [
       carName,
       carSpeed,
-      carCrashed,
-      carRight,
-      carLeft,
-      carFront,
-      carBack
+      carAccelerometer,
+      carBrakePressure,
+      carGyroscope,
+      carDistanceFromVehicle,
+      carStreetName,
+      carAreaCode,
+      carTimeOfDay,
+      carWeather,
+      carCrashed
     ];
     return array;
   } catch (error) {
@@ -298,14 +465,39 @@ $(document).ready(function() {
       //get user permission for metamask
       await userPermission();
 
+      /*
       let name = document.querySelector("#ownerInput").value;
       let speed = document.querySelector("#speedInput").value;
       let crashed = document.querySelector("#crashedInput").value;
       let right = document.querySelector("#rightInput").value;
       let left = document.querySelector("#leftInput").value;
       let front = document.querySelector("#frontInput").value;
-      let back = document.querySelector("#backInput").value;
-      await setAttributes(name, speed, crashed, right, left, front, back);
+      let back = document.querySelector("#backInput").value;*/
+      let name = "Harry";
+      let speed = 80;
+      let accelerometer = 10;
+      let gyroscope = 800;
+      let brakePressure = 1;
+      let distanceFromVehicle = 20;
+      let streetName = "Market St";
+      let areaCode = "11000";
+      let timeOfDay = "21:00";
+      let weather = "Cloudy";
+      let crashed = 1;
+
+      await setAttributes(
+        name,
+        speed,
+        accelerometer,
+        gyroscope,
+        brakePressure,
+        distanceFromVehicle,
+        streetName,
+        areaCode,
+        timeOfDay,
+        weather,
+        crashed
+      );
     } catch (error) {
       console.log(error);
     }
@@ -316,13 +508,17 @@ $(document).ready(function() {
       .then(res => {
         document.querySelector("#ownerOutput").innerHTML = res[0];
         document.querySelector("#speedOutput").innerHTML = res[1] + " mph";
-        document.querySelector("#rightOutput").innerHTML = res[3] + " psi";
-        document.querySelector("#leftOutput").innerHTML = res[4] + " psi";
-        document.querySelector("#frontOutput").innerHTML = res[5] + " psi";
-        document.querySelector("#backOutput").innerHTML = res[6] + " psi";
-        document.querySelector("#crashedOutput").innerHTML = res[2];
+        document.querySelector("#accelerometer").innerHTML = res[2];
+        document.querySelector("#gyroscope").innerHTML = res[4];
+        document.querySelector("#brakePressure").innerHTML = res[3];
+        document.querySelector("#distanceFromVehicle").innerHTML = res[5];
+        document.querySelector("#streetName").innerHTML = res[6];
+        document.querySelector("#areaCode").innerHTML = res[7];
+        document.querySelector("#timeOfDay").innerHTML = res[8];
+        document.querySelector("#weather").innerHTML = res[9];
+        document.querySelector("#crashed").innerHTML = res[10];
       })
       .catch(error => console.log(error));
   }
-  $(".dropbtn").on("change", onChange);
+  $(".dropbtn").on("click", onChange);
 });

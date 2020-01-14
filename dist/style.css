@@ -1,5 +1,6 @@
 html {
-  background: url(carAccident.jpg) no-repeat center center fixed;
+  /*background: url(carAccident.jpg) no-repeat center center fixed;*/
+  background-color: #88bdbc;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -8,7 +9,9 @@ html {
 
 label {
   font-size: 18px;
+  color: white;
 }
+
 input {
   width: 50%;
   padding: 12px 20px;
@@ -21,7 +24,7 @@ input {
 
 input {
   width: 50%;
-  background-color: #4caf50;
+  background-color: #254e58;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -31,60 +34,89 @@ input {
   font-size: 16px;
 }
 
-input:hover {
-  background-color: #45a049;
+/*
+img {
+  border-radius: 3%;
+}*/
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 16%;
+  top: 30px;
 }
 
 .splitLeft {
   left: 0;
   height: 100%;
   width: 50%;
+  margin: 100px;
   position: fixed;
   z-index: 1;
-  top: 0;
+  top: 50px;
   overflow-x: hidden;
   padding-top: 20px;
 }
 
 .splitRight {
-  right: 0;
+  right: -250px;
   height: 100%;
   width: 50%;
+  margin: 200px;
   position: fixed;
   z-index: 1;
-  top: 0;
+  top: -50px;
   overflow-x: hidden;
   padding-top: 20px;
 }
 
-/* left side */
+/* left side 
 .Inputs {
   width: 45%;
   border-radius: 3px;
   background-color: #f0e2e2;
   padding: 20px;
 }
+*/
 
 #inputSubmit {
-  font-size: 20px;
-  border-radius: 3px;
-  width: 100px;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #112d32;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+#inputSubmit:hover {
+  background-color: #033d4d;
 }
 
 /* right side */
 .Outputs {
-  width: 30%;
+  width: 50%;
+  color: white;
   border-radius: 3px;
-  background-color: hsla(14, 100%, 53%, 0.6);
+  background-color: #4f4a41;
   padding: 10px;
   font-size: 16px;
   position: absolute;
   margin-left: 150px;
 }
 
-/* dropdown menu */
 .dropbtn {
-  background-color: #4caf50;
+  cursor: none;
+}
+
+/* dropdown menu 
+.dropbtn {
+  background-color: #112d32;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -124,3 +156,4 @@ input:hover {
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
 }
+*/

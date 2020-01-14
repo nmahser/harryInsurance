@@ -1,23 +1,26 @@
-pragma solidity 0.5.1;
+pragma solidity 0.5.12;
 
 contract autoCar{
 
     struct Car {
         string name;
         uint speed;
-        uint right;
-        uint left;
-        uint front;
-        uint back;
-        string crashed;
-
+        uint accelerometer;
+        uint gyroscope;
+        uint brakePressure;
+        uint distanceFromVehicle;
+        string streetName;
+        uint areaCode;
+        string timeOfDay;
+        string weather;
+        uint crashed;
     }
 
     Car[] cars;
 
 
-    function addCar(string memory _name, uint _speed, uint _right, uint _left, uint _front, uint _back,string memory _crashed) public returns (uint) {
-        return cars.push(Car(_name,_speed, _right,_left,_front,_back,_crashed)) -1;
+    function addCar(string memory _name, uint _speed, uint _accelerometer, uint _gyroscope, uint _brakePressure, uint _distanceFromVehicle, string memory _streetName,uint _areaCode,string memory _timeOfDay,string memory _weather, uint _crashed) public returns (uint) {
+        return cars.push(Car(_name,_speed, _accelerometer,_gyroscope,_brakePressure,_distanceFromVehicle,_streetName,_areaCode,_timeOfDay,_weather,_crashed)) -1;
     }
 
     function getCarName(uint _id) public view returns (string memory) {
@@ -28,25 +31,48 @@ contract autoCar{
         return cars[_id].speed;
     }
 
-    function getCarCrashed(uint _id) public view returns (string memory) {
+    function getCarAccelerometer(uint _id) public view returns (uint) {
+        return cars[_id].accelerometer;
+    }
+
+    function getCarGyroscope(uint _id) public view returns (uint) {
+        return cars[_id].gyroscope;
+    }
+
+    function getCarBrakePressure(uint _id) public view returns (uint) {
+        return cars[_id].brakePressure;
+    }
+
+    function getCarDistanceFromVehicle(uint _id) public view returns (uint) {
+        return cars[_id].distanceFromVehicle;
+    }
+
+   
+    
+    function getCarStreetName(uint _id) public view returns (string memory) {
+        return cars[_id].streetName;
+    }
+    
+     function getCarAreaCode(uint _id) public view returns (uint) {
+        return cars[_id].areaCode;
+    }
+    
+    function getCarTimeOfDay(uint _id) public view returns (string memory) {
+        return cars[_id].timeOfDay;
+    }
+    
+    function getCarWeather(uint _id) public view returns (string memory) {
+        return cars[_id].weather;
+        
+    }
+    
+    
+     function getCarCrashed(uint _id) public view returns (uint) {
         return cars[_id].crashed;
+        
     }
-
-    function getCarRight(uint _id) public view returns (uint) {
-        return cars[_id].right;
-    }
-
-    function getCarLeft(uint _id) public view returns (uint) {
-        return cars[_id].left;
-    }
-
-    function getCarFront(uint _id) public view returns (uint) {
-        return cars[_id].front;
-    }
-
-    function getCarBack(uint _id) public view returns (uint) {
-        return cars[_id].back;
-    }
+    
+    
 
 }
     
